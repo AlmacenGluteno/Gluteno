@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,800;1,400;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Nunito Sans', sans-serif;
+}
+p{
+    font-size: 1.1rem;
+}
+h1{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+.title{
+    font-weight: 800;
+}
+h5{
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+main{
+    display: flex;
+}
+
+nav{
+    width: 100vw;
+    display: none;
+}
+
+.verdecito{
+    height: 100vh;
+    width: 30vw;
+    background-image: linear-gradient(120deg, #42ffda 0%, rgb(58, 214, 136) 100%);
+    padding: 10vh 10vh;
+}
+
+.verdecito p {
+    margin-top: 11vh;
+    text-align: end;
+}
+
+.blanquito{
+    display: grid;
+    grid-template-columns: .2fr 1fr 1fr .2fr .2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100vh;
+    width: 70vw;
+    padding: 10vh 10vh;
+}
+
+.brand{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.cont-brand{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btn-productos{
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+button{
+    font-size: 1.5rem;
+    background-image: linear-gradient(120deg, #ff2d56 0%, #f8428e 100%);
+    border: transparent;
+    padding: .6rem 2rem;
+    position: relative;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.267);
+}
+
+button:hover{
+    background-image: linear-gradient(120deg, #ff2d57d2 0%, #f8428ed8 100%);
+    color: white;
+    transition:all .5s;
+}
+
+.redes{
+    grid-row: 1/4;
+    grid-column: 4/5;
+    background-image: linear-gradient(120deg, #42ffda 0%, rgb(58, 214, 136) 100%);
+    height: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.267);
+}
+
+.redestxt{
+    grid-row: 1/4;
+    grid-column: 5/6;
+    writing-mode: vertical-lr;
+}
+
+ul{
+    font-size: 2rem;
+    line-height: 4rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+li {
+    text-align: center; 
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: white;
+    transition: .5s;
+}
+
+.lineamedio{
+    display: inline-flex;
+    position: absolute;
+    background-color: white;
+    width: 40vw;
+    height: 3vh;
+    left: 10vw;
+    top: 20vh;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.267);
+}
+.lineagreen{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    left: 50%;
+    background-image: linear-gradient(to left, #42ffda 0%, rgb(58, 214, 136) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.267);
+}
+.lineader-a{
+    width: 40vw;
+    height: 30vh;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-top: transparent;
+    border-right: transparent;
+    position: absolute;
+    bottom: 10vh;
+    left: 10vh;
+}
+.lineatop{
+    width: 20vw;
+    border: 1px solid black;
+    position: absolute;
+    top: 10vh;
+    right: 23vw;
+}
+
+@media (max-width:1060px){
+    .blanquito{
+        width: 90vw;
+        height: 100vh;
+        margin: auto;
+        display: grid;
+        grid-template-rows: 1fr .2fr .2fr;
+        grid-template-columns: 1fr;
+    }
+    .brand, .btn-productos{
+        width: 100%;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .btn-productos button{
+        position: relative;
+        left: 0%;
+        top: 50%;
+    }
+    .cont-brand{
+        top: 20%;
+    }
+    .redestxt{
+        width: 100%;
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .redestxt h3{
+        writing-mode: horizontal-tb;
+    }
+    .redes{
+        width: 100%;
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    .redes ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    div.lineamedio{
+        display: none;
+    }
+    .verdecito{
+        display: none;
+    }
+    .lineamedio{
+        display: none;
+    }
+    .lineagreen{
+        display: none;
+    }
+    .lineader-a{
+        display: none;
+    }
+    .lineatop{
+        width: 80vw;
+        border: 1px solid black;
+        position: absolute;
+        top: 60vh;
+        right: 10vw;
+    }
+    main{
+        background-image: linear-gradient(120deg, #42ffda 0%, rgb(58, 214, 136) 100%);
+    }
+}
